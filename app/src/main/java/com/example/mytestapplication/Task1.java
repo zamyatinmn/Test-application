@@ -3,8 +3,7 @@ package com.example.mytestapplication;
 public class Task1 {
     public static void main(String[] args) {
         Employee tester = new Employee(7,"Developer");
-        System.out.println(tester.getId());
-        System.out.println(tester.getVacancy());
+        tester.print();
     }
 }
 
@@ -16,11 +15,8 @@ class Employee {
         this.id = id;
         this.vacancy = new Vacancy(position);
     }
-    String getVacancy() {
-        return vacancy.getVacancy();
-    }
-    long getId() {
-        return id;
+    void print(){
+        System.out.println(id + System.lineSeparator() + vacancy.getVacancy());
     }
 }
 
